@@ -15,7 +15,7 @@ query = st.text_input("Enter a query below")
 if query:
     ids_list = search_query(query, nb_publication)
     if ids_list:
-        st.write("Let's watch inspirational video while downloading")
+        st.write("Let's watch inspirational/inspiring video while downloading")
         st.video(return_one_random_url())
         articles = fetch_details(ids_list)
         my_bar = st.progress(0)
