@@ -1,8 +1,10 @@
-from importlib import reload
+
 import streamlit as st
+import streamlit.components.v1 as components
 from controller.main_controller import get_table_download_link
 from view.get_video import return_one_random_url
 from view.display_utils import image
+from view.html_variables import buy_a_coffee
 from model.pubmed_api import search_query, fetch_details
 from model.df_generation import DataFrameGenertion
 
@@ -34,3 +36,5 @@ if query:
 
 st.write("")
 st.write("Made with ❤️ by 🍌")
+
+components.html(buy_a_coffee)
